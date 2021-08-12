@@ -70,10 +70,10 @@ function init() {
     var bmp = new createjs.Bitmap();	  
     stage.addChild(bmp);
     
-    var myTxt = new createjs.Text("360 Car Prototype", '24px Ubuntu', "#ffffff");
+    /*var myTxt = new createjs.Text("360 Car Prototype", '24px Ubuntu', "#ffffff");
     myTxt.x = myTxt.y =20;
     myTxt.alpha = 0.08;
-    stage.addChild(myTxt);   
+    stage.addChild(myTxt);   */
     
     
     function load360Image() {
@@ -86,7 +86,7 @@ function init() {
     function img360Loaded(event) {
         loaded++;        
         bg.graphics.clear()
-        bg.graphics.beginFill("#222").drawRect(0,0,stage.canvas.width * loaded/totalFrames, stage.canvas.height);
+       // bg.graphics.beginFill("#222").drawRect(0,0,stage.canvas.width * loaded/totalFrames, stage.canvas.height);
         bg.graphics.endFill();
         
         if(loaded==totalFrames) start360();
